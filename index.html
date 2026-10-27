@@ -1,0 +1,589 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional Cybersecurity & Digital Forensics Portfolio - Software Engineer turned Security Expert" />
+  <meta name="keywords" content="cybersecurity, digital forensics, software engineer, penetration testing, malware analysis, portfolio" />
+  <title>Henil | Cybersecurity & Digital Forensics Expert</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- â”€â”€ CANVAS MATRIX â”€â”€ -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- â”€â”€ CURSOR â”€â”€ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- â”€â”€ LOADER â”€â”€ -->
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <div class="loader-glitch" data-text="INITIALIZING...">INITIALIZING...</div>
+      <div class="loader-bar"><div class="loader-fill" id="loader-fill"></div></div>
+      <div class="loader-status" id="loader-status">Loading security protocols...</div>
+    </div>
+  </div>
+
+  <!-- â”€â”€ NAV â”€â”€ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">[</span>
+      <span class="logo-text">Henil</span>
+      <span class="logo-bracket">]</span>
+    </div>
+    <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home"     class="nav-link active" data-section="home">Home</a></li>
+      <li><a href="#about"    class="nav-link"        data-section="about">About</a></li>
+      <li><a href="#skills"   class="nav-link"        data-section="skills">Skills</a></li>
+      <li><a href="#projects" class="nav-link"        data-section="projects">Projects</a></li>
+      <li><a href="#contact"  class="nav-link"        data-section="contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Hire Me</a>
+  </nav>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• HOME â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section id="home" class="section hero-section">
+    <div class="hero-bg-image"></div>
+    <div class="hero-scanline"></div>
+    <div class="hero-content">
+      <div class="hero-tag"><span class="tag-dot"></span>Available for Opportunities</div>
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name glitch" data-text="Henil">Henil</h1>
+      <div class="hero-role">
+        <span class="role-prefix">&gt;&gt; </span>
+        <span class="typewriter" id="typewriter"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-bio">
+        Software Engineer turned <span class="highlight">Cybersecurity Specialist</span> &amp;
+        <span class="highlight">Digital Forensics Investigator</span>. Protecting digital assets,
+        uncovering hidden threats, and building secure systems.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-card"><span class="stat-num" data-count="3">0</span><span class="stat-plus">+</span><span class="stat-label">Years in Security</span></div>
+        <div class="stat-card"><span class="stat-num" data-count="25">0</span><span class="stat-plus">+</span><span class="stat-label">Projects Completed</span></div>
+        <div class="stat-card"><span class="stat-num" data-count="10">0</span><span class="stat-plus">+</span><span class="stat-label">CTF Wins</span></div>
+      </div>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary"><i class="fas fa-shield-alt"></i> View Projects</a>
+        <a href="resume.pdf" class="btn btn-secondary" target="_blank"><i class="fas fa-file-download"></i> Download CV</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com"   target="_blank" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://twitter.com"  target="_blank" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://tryhackme.com" target="_blank" class="social-link" title="TryHackMe"><i class="fas fa-skull-crossbones"></i></a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hex-ring ring-1"></div>
+      <div class="hex-ring ring-2"></div>
+      <div class="hex-ring ring-3"></div>
+      <div class="avatar-wrapper">
+        <img src="profile_avatar.png" alt="Henil - Cybersecurity Expert" class="avatar-img" />
+        <div class="avatar-glow"></div>
+      </div>
+      <div class="floating-badges">
+        <div class="badge badge-1"><i class="fas fa-lock"></i> Secure</div>
+        <div class="badge badge-2"><i class="fas fa-search"></i> Forensics</div>
+        <div class="badge badge-3"><i class="fas fa-bug"></i> Ethical Hacking</div>
+        <div class="badge badge-4"><i class="fas fa-shield-virus"></i> Defense</div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll Down</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• ABOUT â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 01. WHO AM I</span>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-visual reveal-left">
+          <div class="about-img-frame">
+            <img src="profile_avatar.png" alt="Profile" class="about-img" />
+            <div class="frame-corner fc-tl"></div>
+            <div class="frame-corner fc-tr"></div>
+            <div class="frame-corner fc-bl"></div>
+            <div class="frame-corner fc-br"></div>
+            <div class="scan-line"></div>
+          </div>
+          <div class="terminal-card">
+            <div class="terminal-header">
+              <span class="t-dot red"></span>
+              <span class="t-dot yellow"></span>
+              <span class="t-dot green"></span>
+              <span class="t-title">user@portfolio:~$</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="t-cmd">whoami</span></p>
+              <p class="t-out">henil_security_expert</p>
+              <p><span class="t-cmd">cat specialization.txt</span></p>
+              <p class="t-out">Cybersecurity &amp; Digital Forensics</p>
+              <p><span class="t-cmd">cat location.txt</span></p>
+              <p class="t-out">India ðŸ‡®ðŸ‡³</p>
+              <p><span class="t-cmd">cat status.txt</span></p>
+              <p class="t-out typing-terminal">Open to opportunities_</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-content reveal-right">
+          <h3 class="about-heading">From Code to <span class="accent">Cyber Defense</span></h3>
+          <p class="about-text">
+            I began my journey as a <strong>Software Engineer</strong>, building robust applications and solving
+            complex algorithmic challenges. Over time, I discovered my true passionâ€”the intersection of
+            technology and security.
+          </p>
+          <p class="about-text">
+            Today, I specialize in <strong>Cybersecurity</strong> and <strong>Digital Forensics</strong>,
+            where I analyze threats, investigate digital crimes, perform penetration testing, and help
+            organizations build impenetrable defense systems.
+          </p>
+          <p class="about-text">
+            My software engineering background gives me a unique edge: I can think like a developer
+            <em>and</em> a hackerâ€”understanding both how systems are built and how they can be broken.
+          </p>
+          <div class="about-details">
+            <div class="detail-item"><i class="fas fa-user-secret"></i><span><strong>Role:</strong> Cybersecurity Analyst &amp; Digital Forensics Investigator</span></div>
+            <div class="detail-item"><i class="fas fa-graduation-cap"></i><span><strong>Education:</strong> B.Tech Computer Science &amp; Engineering</span></div>
+            <div class="detail-item"><i class="fas fa-certificate"></i><span><strong>Certifications:</strong> CEH, CompTIA Security+, CHFI</span></div>
+            <div class="detail-item"><i class="fas fa-map-marker-alt"></i><span><strong>Location:</strong> India</span></div>
+          </div>
+          <div class="about-certs">
+            <div class="cert-badge"><i class="fas fa-medal"></i>CEH</div>
+            <div class="cert-badge"><i class="fas fa-medal"></i>CompTIA Sec+</div>
+            <div class="cert-badge"><i class="fas fa-medal"></i>CHFI</div>
+            <div class="cert-badge"><i class="fas fa-medal"></i>eJPT</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• SKILLS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 02. CAPABILITIES</span>
+        <h2 class="section-title">My <span class="accent">Skills</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-tabs" id="skills-tabs">
+        <button class="tab-btn active" data-tab="security">ðŸ›¡ï¸ Cybersecurity</button>
+        <button class="tab-btn" data-tab="forensics">ðŸ” Digital Forensics</button>
+        <button class="tab-btn" data-tab="programming">ðŸ’» Programming</button>
+        <button class="tab-btn" data-tab="tools">ðŸ”§ Tools & Platforms</button>
+      </div>
+
+      <!-- Security Tab -->
+      <div class="tab-content active" id="tab-security">
+        <div class="skills-grid">
+          <div class="skill-card reveal-up" style="--i:1">
+            <div class="skill-icon"><i class="fas fa-user-ninja"></i></div>
+            <h4>Penetration Testing</h4>
+            <p>Web app, network, and system pentesting using industry-standard methodologies (OWASP, PTES)</p>
+            <div class="skill-bar"><div class="skill-fill" data-pct="88"></div></div>
+            <span class="skill-pct">88%</span>
+          </div>
+          <div class="skill-card reveal-up" style="--i:2">
+            <div class="skill-icon"><i class="fas fa-bug"></i></div>
+            <h4>Malware Analysis</h4>
+            <p>Static & dynamic analysis, reverse engineering, sandbox environments, IOC extraction</p>
+            <div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-card reveal-up" style="--i:3">
+            <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+            <h4>Network Security</h4>
+            <p>Firewall configuration, IDS/IPS, traffic analysis, VPN security, zero-trust architecture</p>
+            <div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-card reveal-up" style="--i:4">
+            <div class="skill-icon"><i class="fas fa-shield-virus"></i></div>
+            <h4>Vulnerability Assessment</h4>
+            <p>CVE analysis, CVSS scoring, risk assessment, patch management, security auditing</p>
+            <div class="skill-bar"><div class="skill-fill" data-pct="90"></div></div>
+            <span class="skill-pct">90%</span>
+          </div>
+          <div class="skill-card reveal-up" style="--i:5">
+            <div class="skill-icon"><i class="fas fa-lock"></i></div>
+            <h4>Cryptography</h4>
+            <p>PKI, SSL/TLS, symmetric/asymmetric encryption, hash functions, steganography</p>
+            <div class="skill-bar"><div class="skill-fill" data-pct="78"></div></div>
+            <span class="skill-pct">78%</span>
+          </div>
+          <div class="skill-card reveal-up" style="--i:6">
+            <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+            <h4>Cloud Security</h4>
+            <p>AWS/Azure security, IAM, cloud pentesting, container security, DevSecOps practices</p>
+            <div class="skill-bar"><div class="skill-fill" data-pct="75"></div></div>
+            <span class="skill-pct">75%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Forensics Tab -->
+      <div class="tab-content" id="tab-forensics">
+        <div class="skills-grid">
+          <div class="skill-card reveal-up" style="--i:1">
+            <div class="skill-icon"><i class="fas fa-hdd"></i></div>
+            <h4>Disk Forensics</h4>
+            <p>Evidence acquisition, file system analysis, deleted file recovery, disk imaging (dd, FTK)</p>
+            <div class="skill-bar"><div class="skill-fill" data-pct="85"></div></div>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-card reveal-up" style="--i:2">
+            <div class="skill-icon"><i class="fas fa-memory"></i></div>
+            <h4>Memory Forensics</h4>
+            <p>RAM dump analysis, process investigation, malware artifact extraction using Volatility</p>
+            <div class="skill-bar"><div class="skill-fill" data-pct="80"></div></div>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-card reveal-up" style="--i:3">
+            <div class="skill-icon"><i class="fas fa-wifi"></i></div>
+            <h4>Network Forensics</h4>
+            <p>PCAP analysis, Wireshark, NetFlow investigation, intrusion detection, traffic reconstruction</p>
+            <div class="skill-bar"><div class="skill-fill" data-pct="88"></div></div>
+            <span class="skill-pct">88%</span>
+          </div>
+          <div class="skill-card reveal-up" style="--i:4">
+            <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+            <h4>Mobile Forensics</h4>
+            <p>Android/iOS artifact extraction, app data analysis, deleted message recovery, GPS tracking</p>
+            <div class="skill-bar"><div class="skill-fill" data-pct="72"></div></div>
+            <span class="skill-pct">72%</span>
+          </div>
+          <div class="skill-card reveal-up" style="--i:5">
+            <div class="skill-icon"><i class="fas fa-file-alt"></i></div>
+            <h4>Log Analysis</h4>
+            <p>SIEM tools, event log analysis, threat hunting, anomaly detection, incident timelines</p>
+            <div class="skill-bar"><div class="skill-fill" data-pct="83"></div></div>
+            <span class="skill-pct">83%</span>
+          </div>
+          <div class="skill-card reveal-up" style="--i:6">
+            <div class="skill-icon"><i class="fas fa-gavel"></i></div>
+            <h4>Legal & Reporting</h4>
+            <p>Chain of custody, forensic report writing, court-admissible evidence handling, compliance</p>
+            <div class="skill-bar"><div class="skill-fill" data-pct="78"></div></div>
+            <span class="skill-pct">78%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Programming Tab -->
+      <div class="tab-content" id="tab-programming">
+        <div class="lang-grid">
+          <div class="lang-card reveal-up" style="--i:1"><div class="lang-icon python">Py</div><span>Python</span><div class="lang-bar"><div class="lang-fill" style="--w:92%"></div></div></div>
+          <div class="lang-card reveal-up" style="--i:2"><div class="lang-icon bash">$_</div><span>Bash/Shell</span><div class="lang-bar"><div class="lang-fill" style="--w:85%"></div></div></div>
+          <div class="lang-card reveal-up" style="--i:3"><div class="lang-icon cpp">C++</div><span>C / C++</span><div class="lang-bar"><div class="lang-fill" style="--w:78%"></div></div></div>
+          <div class="lang-card reveal-up" style="--i:4"><div class="lang-icon js">JS</div><span>JavaScript</span><div class="lang-bar"><div class="lang-fill" style="--w:82%"></div></div></div>
+          <div class="lang-card reveal-up" style="--i:5"><div class="lang-icon go">Go</div><span>Golang</span><div class="lang-bar"><div class="lang-fill" style="--w:68%"></div></div></div>
+          <div class="lang-card reveal-up" style="--i:6"><div class="lang-icon sql">SQL</div><span>SQL</span><div class="lang-bar"><div class="lang-fill" style="--w:80%"></div></div></div>
+          <div class="lang-card reveal-up" style="--i:7"><div class="lang-icon java">Jv</div><span>Java</span><div class="lang-bar"><div class="lang-fill" style="--w:74%"></div></div></div>
+          <div class="lang-card reveal-up" style="--i:8"><div class="lang-icon asm">ASM</div><span>Assembly</span><div class="lang-bar"><div class="lang-fill" style="--w:60%"></div></div></div>
+        </div>
+      </div>
+
+      <!-- Tools Tab -->
+      <div class="tab-content" id="tab-tools">
+        <div class="tools-grid">
+          <div class="tool-item reveal-up" style="--i:1"><i class="fas fa-crosshairs"></i><span>Metasploit</span></div>
+          <div class="tool-item reveal-up" style="--i:2"><i class="fas fa-eye"></i><span>Wireshark</span></div>
+          <div class="tool-item reveal-up" style="--i:3"><i class="fas fa-search-plus"></i><span>Nmap</span></div>
+          <div class="tool-item reveal-up" style="--i:4"><i class="fas fa-fire"></i><span>Burp Suite</span></div>
+          <div class="tool-item reveal-up" style="--i:5"><i class="fas fa-database"></i><span>SQLMap</span></div>
+          <div class="tool-item reveal-up" style="--i:6"><i class="fas fa-atom"></i><span>Volatility</span></div>
+          <div class="tool-item reveal-up" style="--i:7"><i class="fas fa-fingerprint"></i><span>Autopsy / FTK</span></div>
+          <div class="tool-item reveal-up" style="--i:8"><i class="fas fa-terminal"></i><span>Kali Linux</span></div>
+          <div class="tool-item reveal-up" style="--i:9"><i class="fas fa-skull"></i><span>Ghidra / IDA Pro</span></div>
+          <div class="tool-item reveal-up" style="--i:10"><i class="fas fa-chart-bar"></i><span>Splunk / ELK</span></div>
+          <div class="tool-item reveal-up" style="--i:11"><i class="fas fa-box"></i><span>Docker / VMs</span></div>
+          <div class="tool-item reveal-up" style="--i:12"><i class="fas fa-cloud-upload-alt"></i><span>AWS Security</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• PROJECTS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 03. PORTFOLIO</span>
+        <h2 class="section-title">My <span class="accent">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="security">Security</button>
+        <button class="filter-btn" data-filter="forensics">Forensics</button>
+        <button class="filter-btn" data-filter="tools">Tools</button>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+
+        <div class="project-card reveal-up" data-category="security" style="--i:1">
+          <div class="project-img-wrapper">
+            <div class="project-placeholder sec1">
+              <i class="fas fa-spider"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+              <a href="#" class="project-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span class="ptag">Python</span><span class="ptag">Security</span><span class="ptag">Automation</span></div>
+            <h3>AutoPenTest Framework</h3>
+            <p>An automated penetration testing framework that performs reconnaissance, vulnerability scanning, and exploitation using Python. Integrates with Metasploit, Nmap, and custom exploit modules.</p>
+            <div class="project-meta">
+              <span><i class="fas fa-star"></i> 120 Stars</span>
+              <span><i class="fas fa-code-branch"></i> 34 Forks</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-category="forensics" style="--i:2">
+          <div class="project-img-wrapper">
+            <div class="project-placeholder sec2">
+              <i class="fas fa-search"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+              <a href="#" class="project-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span class="ptag">Python</span><span class="ptag">Forensics</span><span class="ptag">Volatility</span></div>
+            <h3>MemSnap Analyzer</h3>
+            <p>A memory forensics tool built on top of Volatility3 that automates the extraction of forensic artifacts from RAM dumps. Generates detailed HTML reports with timeline visualization.</p>
+            <div class="project-meta">
+              <span><i class="fas fa-star"></i> 87 Stars</span>
+              <span><i class="fas fa-code-branch"></i> 21 Forks</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-category="tools" style="--i:3">
+          <div class="project-img-wrapper">
+            <div class="project-placeholder sec3">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+              <a href="#" class="project-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span class="ptag">Flask</span><span class="ptag">React</span><span class="ptag">SIEM</span></div>
+            <h3>ThreatWatch Dashboard</h3>
+            <p>A real-time threat intelligence dashboard that aggregates data from multiple threat feeds (VirusTotal, Shodan, MISP). Visualizes attack patterns and generates automated alerts.</p>
+            <div class="project-meta">
+              <span><i class="fas fa-star"></i> 95 Stars</span>
+              <span><i class="fas fa-code-branch"></i> 28 Forks</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-category="forensics" style="--i:4">
+          <div class="project-img-wrapper">
+            <div class="project-placeholder sec4">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+              <a href="#" class="project-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span class="ptag">Android</span><span class="ptag">Forensics</span><span class="ptag">ADB</span></div>
+            <h3>DroidForensics Toolkit</h3>
+            <p>Mobile forensics toolkit for Android devices that extracts app data, SMS/call logs, GPS history, and deleted files while maintaining forensic integrity through hash verification.</p>
+            <div class="project-meta">
+              <span><i class="fas fa-star"></i> 64 Stars</span>
+              <span><i class="fas fa-code-branch"></i> 18 Forks</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-category="security" style="--i:5">
+          <div class="project-img-wrapper">
+            <div class="project-placeholder sec5">
+              <i class="fas fa-bug"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+              <a href="#" class="project-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span class="ptag">Python</span><span class="ptag">ML</span><span class="ptag">IDS</span></div>
+            <h3>ML-Based IDS System</h3>
+            <p>Intrusion Detection System using machine learning (Random Forest + LSTM) to detect network anomalies with 96% accuracy. Trained on NSL-KDD and CICIDS datasets.</p>
+            <div class="project-meta">
+              <span><i class="fas fa-star"></i> 143 Stars</span>
+              <span><i class="fas fa-code-branch"></i> 47 Forks</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" data-category="tools" style="--i:6">
+          <div class="project-img-wrapper">
+            <div class="project-placeholder sec6">
+              <i class="fas fa-file-code"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+              <a href="#" class="project-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags"><span class="ptag">Bash</span><span class="ptag">OSINT</span><span class="ptag">Recon</span></div>
+            <h3>OSINT Recon Engine</h3>
+            <p>Automated OSINT reconnaissance tool that aggregates social media, domain, email, and IP intelligence for cybersecurity investigations and threat actor profiling.</p>
+            <div class="project-meta">
+              <span><i class="fas fa-star"></i> 201 Stars</span>
+              <span><i class="fas fa-code-branch"></i> 62 Forks</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• CONTACT â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 04. GET IN TOUCH</span>
+        <h2 class="section-title">Contact <span class="accent">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <h3>Let's Work <span class="accent">Together</span></h3>
+          <p>Whether you need a security assessment, digital forensics investigation, or just want to connect â€” my inbox is always open.</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-detail"><span>Email</span><a href="mailto:henil@cybersec.dev">henil@cybersec.dev</a></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div class="contact-detail"><span>Phone</span><a href="tel:+910000000000">+91 00000 00000</a></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-detail"><span>Location</span><p>India ðŸ‡®ðŸ‡³</p></div>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://github.com"    target="_blank" class="cs-link" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com"  target="_blank" class="cs-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://tryhackme.com" target="_blank" class="cs-link" title="TryHackMe"><i class="fas fa-skull-crossbones"></i></a>
+            <a href="https://twitter.com"   target="_blank" class="cs-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+          <div class="threat-status">
+            <div class="ts-header"><span class="t-dot green blink"></span> Security Status: ONLINE</div>
+            <div class="ts-line">Threat Level: <span class="green">LOW</span></div>
+            <div class="ts-line">Systems: <span class="green">PROTECTED</span></div>
+            <div class="ts-line">Monitoring: <span class="green">ACTIVE</span></div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper reveal-right">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-user"></i>
+                  <input type="text" id="name" name="name" placeholder="John Doe" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-envelope"></i>
+                  <input type="email" id="email" name="email" placeholder="john@example.com" required />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <div class="input-wrapper">
+                <i class="fas fa-tag"></i>
+                <input type="text" id="subject" name="subject" placeholder="Security Consultation" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="service">Service Required</label>
+              <div class="input-wrapper select-wrapper">
+                <i class="fas fa-cog"></i>
+                <select id="service" name="service">
+                  <option value="">Select a service...</option>
+                  <option value="pentest">Penetration Testing</option>
+                  <option value="forensics">Digital Forensics Investigation</option>
+                  <option value="vuln">Vulnerability Assessment</option>
+                  <option value="consult">Security Consultation</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <div class="input-wrapper textarea-wrapper">
+                <i class="fas fa-comment-alt"></i>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or security needs..." required></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+              <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+              <span class="btn-loading" style="display:none"><i class="fas fa-spinner fa-spin"></i> Transmitting...</span>
+            </button>
+            <div class="form-success" id="form-success">
+              <i class="fas fa-check-circle"></i> Message transmitted successfully! I'll respond within 24 hours.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â”€â”€ FOOTER â”€â”€ -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="logo-bracket">[</span><span class="logo-text">Henil</span><span class="logo-bracket">]</span>
+        <p>Cybersecurity &amp; Digital Forensics</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p class="footer-copy">Â© 2024 Henil. All rights reserved. | Securing the digital world, one byte at a time.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
