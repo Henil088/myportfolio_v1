@@ -288,12 +288,17 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 (function initForm() {
   const form    = document.getElementById('contact-form');
   const success = document.getElementById('form-success');
+  const error   = document.getElementById('form-error');
   const btn     = document.getElementById('submit-btn');
   if (!form) return;
 
-  form.addEventListener('submit', e => {
+  const serviceId = 'service_0lb2tgm';
+  const templateId = 'template_qgmqw3m';
+  const publicKey = 'OULcgmXW8JhNAZvs_';
+
+  form.addEventListener('submit', async e => {
     e.preventDefault();
-    // Validate
+
     let valid = true;
     form.querySelectorAll('[required]').forEach(field => {
       if (!field.value.trim()) {
@@ -303,22 +308,51 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
       }
     });
     if (!valid) return;
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
 
-    // Simulate send
     const btnText    = btn.querySelector('.btn-text');
     const btnLoading = btn.querySelector('.btn-loading');
+    success.style.display = 'none';
+    error.style.display = 'none';
     btn.disabled = true;
     btnText.style.display = 'none';
     btnLoading.style.display = 'flex';
 
-    setTimeout(() => {
-      btn.disabled = false;
-      btnText.style.display = 'flex';
-      btnLoading.style.display = 'none';
+    const serviceField = form.elements.service;
+    const name = form.elements.name.value.trim();
+    const email = form.elements.email.value.trim();
+    const subject = form.elements.subject.value.trim();
+    const service = serviceField.selectedOptions[0].text;
+    const message = form.elements.message.value.trim();
+    const templateParams = {
+      name,
+      from_name: name,
+      email,
+      from_email: email,
+      reply_to: email,
+      subject,
+      service,
+      service_required: service,
+      message,
+    };
+
+    try {
+      await emailjs.send(serviceId, templateId, templateParams, { publicKey });
       success.style.display = 'block';
       form.reset();
       setTimeout(() => { success.style.display = 'none'; }, 6000);
-    }, 2200);
+    } catch (sendError) {
+      console.error('EmailJS contact form submission failed:', sendError);
+      error.textContent = 'Message could not be sent. Please try again later.';
+      error.style.display = 'block';
+    } finally {
+      btn.disabled = false;
+      btnText.style.display = 'flex';
+      btnLoading.style.display = 'none';
+    }
   });
 })();
 

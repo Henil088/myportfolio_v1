@@ -536,7 +536,7 @@
               <label for="service">Service Required</label>
               <div class="input-wrapper select-wrapper">
                 <i class="fas fa-cog"></i>
-                <select id="service" name="service">
+                <select id="service" name="service" required>
                   <option value="">Select a service...</option>
                   <option value="pentest">Penetration Testing</option>
                   <option value="forensics">Digital Forensics Investigation</option>
@@ -560,6 +560,7 @@
             <div class="form-success" id="form-success">
               <i class="fas fa-check-circle"></i> Message transmitted successfully! I'll respond within 24 hours.
             </div>
+            <div class="form-error" id="form-error" role="alert"></div>
           </form>
         </div>
       </div>
@@ -584,6 +585,7 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -555,6 +555,12 @@ ul { list-style: none; }
   color: var(--clr-green); font-family: var(--ff-mono); font-size: 0.85rem;
   text-align: center; animation: fadeDown 0.4s ease;
 }
+.form-error {
+  display: none; padding: 12px 16px; border-radius: var(--radius);
+  background: rgba(255, 70, 70, 0.08); border: 1px solid rgba(255, 70, 70, 0.3);
+  color: var(--clr-red); font-family: var(--ff-mono); font-size: 0.85rem;
+  text-align: center;
+}
 
 /* ── FOOTER ── */
 .footer { padding: 3rem 0; text-align: center; border-top: 1px solid var(--clr-border); background: var(--clr-bg2); }
